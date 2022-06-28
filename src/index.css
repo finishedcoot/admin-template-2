@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text{
+  color: white;
+}
+.listItem{
+  border-radius: 0px 20px 20px 0 !important;
+
+}
+.listItem.Mui-selected .text{
+  color: #18181B !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.listItem.Mui-selected .MuiSvgIcon-root{
+  color: #18181B !important;
+}
+
+
+.listItem.Mui-selected{
+  background-color: rgb(226, 230, 233) !important;
 }
