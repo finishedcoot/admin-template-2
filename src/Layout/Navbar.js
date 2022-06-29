@@ -1,4 +1,6 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import List from "@mui/material/List";
 import Fab from "@mui/material/Fab";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
@@ -38,6 +40,7 @@ const Items = [
 
 const Navbar = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
   const [selectedIndex, setSelectedIndex] = useState(1);
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index);
@@ -45,6 +48,24 @@ const Navbar = () => {
   useEffect(() => {
     if (window.innerWidth < 1024) {
       setCollapsed(true);
+    }
+  }, []);
+  useEffect(() => {
+    const path = location.pathname;
+    switch (path) {
+      case "/mails":
+        setSelectedIndex(2);
+        break;
+      case "/posts":
+        setSelectedIndex(3);
+        // expected output: "Mangoes and papayas are $2.79 a pound."
+        break;
+      case "/calendar":
+        setSelectedIndex(4);
+        // expected output: "Mangoes and papayas are $2.79 a pound."
+        break;
+      default:
+        setSelectedIndex(1);
     }
   }, []);
 

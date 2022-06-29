@@ -28,7 +28,7 @@ const theme = createTheme({
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="flex bg-slate-600">
+      <div className="flex" style={{ backgroundColor: "#1b1c1c" }}>
         <Navbar />
         <div className="flex-1  min-h-screen">{children}</div>
       </div>

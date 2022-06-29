@@ -20,5 +20,9 @@
 
 
 .listItem.Mui-selected{
-  background-color: rgb(226, 230, 233) !important;
+  background-color: #e2e6e9 !important;
+}
+
+.quill{
+  height: 80%
 }
