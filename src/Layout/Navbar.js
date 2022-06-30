@@ -19,16 +19,16 @@ const Items = [
     link: "/",
   },
   {
-    text: "Mails",
-    index: 2,
-    icon: <InboxIcon color="accent100" />,
-    link: "/mails",
-  },
-  {
     text: "Posts",
-    index: 3,
+    index: 2,
     icon: <BurstModeIcon color="accent100" />,
     link: "/posts",
+  },
+  {
+    text: "Mails",
+    index: 3,
+    icon: <InboxIcon color="accent100" />,
+    link: "/mails",
   },
   {
     text: "Calendar",

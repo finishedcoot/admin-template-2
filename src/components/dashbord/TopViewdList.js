@@ -43,9 +43,12 @@ const topViewdList = [
 
 const TopViewdList = () => {
   return (
-    <div className=" h-full  rounded-xl bg-zinc-900 " style={{ width: "49%" }}>
+    <div
+      className="min-h-full  rounded-xl bg-zinc-100"
+      style={{ width: "49%" }}
+    >
       <div className="w-full flex justify-center items-center ">
-        <h3 className="text-xl" style={{ color: "white", fontSize: 20 }}>
+        <h3 className="text-xl" style={{ color: "black", fontSize: 20 }}>
           Top Viewd
         </h3>
       </div>
@@ -58,7 +61,7 @@ const TopViewdList = () => {
                   <Avatar alt="Remy Sharp" src={item.imageUrl} />
                 </ListItemAvatar>
                 <ListItemText
-                  sx={{ color: "white" }}
+                  sx={{ color: "black" }}
                   primary={item.title}
                   secondary={
                     <React.Fragment style={{ color: "white" }}>
@@ -66,7 +69,7 @@ const TopViewdList = () => {
                         sx={{ display: "inline" }}
                         component="span"
                         variant="body2"
-                        color="#e2e6e9"
+                        color="#black"
                       >
                         {item.type}
                       </Typography>
@@ -74,7 +77,7 @@ const TopViewdList = () => {
                         sx={{ display: "inline" }}
                         component="span"
                         variant="body2"
-                        color="#ebedefcb"
+                        color="#black"
                       >
                         — {item.desc} …
                       </Typography>

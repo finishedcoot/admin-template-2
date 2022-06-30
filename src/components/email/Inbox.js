@@ -6,9 +6,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Checkbox from "@mui/material/Checkbox";
 import IconButton from "@mui/material/IconButton";
-import CommentIcon from "@mui/icons-material/Comment";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import StarIcon from "@mui/icons-material/Star";
+import ArchiveIcon from "@mui/icons-material/Archive";
+import DeleteIcon from "@mui/icons-material/Delete";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import MoveToInboxIcon from "@mui/icons-material/MoveToInbox";
 
 const mails = [
   {
@@ -59,7 +62,15 @@ const Inbox = () => {
     setChecked(newChecked);
   };
   return (
-    <div className="w-10/12 h-full pt-20">
+    <div className="w-10/12 h-full pt-5">
+      <div className="flex justify-start items-center">
+        <IconButton edge="end" aria-label="comments">
+          <MoveToInboxIcon />
+        </IconButton>
+        <IconButton>
+          <DeleteOutlineIcon />
+        </IconButton>
+      </div>
       <List sx={{ width: "95%", bgcolor: "background.paper" }}>
         {mails.map((mail) => {
           const labelId = `checkbox-list-label-${mail.id}`;
@@ -72,7 +83,10 @@ const Inbox = () => {
                   <span style={{ fontSize: 12 }}>{mail.date}</span>
 
                   <IconButton edge="end" aria-label="comments">
-                    <CommentIcon />
+                    <ArchiveIcon />
+                  </IconButton>
+                  <IconButton>
+                    <DeleteIcon />
                   </IconButton>
                 </>
               }

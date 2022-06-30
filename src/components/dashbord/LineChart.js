@@ -28,7 +28,7 @@ export const options = {
     legend: {
       position: "top",
       labels: {
-        color: "#e2e6e9",
+        color: "#black",
         font: {
           size: 12,
         },
@@ -37,7 +37,7 @@ export const options = {
     title: {
       display: true,
       text: "Yearly Visits",
-      color: "white",
+      color: "black",
       font: {
         size: 20,
         weight: "lighter",
@@ -46,27 +46,15 @@ export const options = {
   },
   scales: {
     x: {
-      ticks: { color: "#e2e6e9", beginAtZero: true },
+      ticks: { color: "black", beginAtZero: true },
     },
     y: {
-      ticks: { color: "#e2e6e9", beginAtZero: true },
+      ticks: { color: "black", beginAtZero: true },
     },
     yAxes: [
       {
         gridLines: {
           color: "red",
-        },
-      },
-    ],
-    xAxes: [
-      {
-        id: "x-axis-0",
-        ticks: {
-          fontColor: "green",
-        },
-        gridLines: {
-          color: "green",
-          zeroLineColor: "green",
         },
       },
     ],
@@ -91,7 +79,7 @@ export const data = {
 const LineChart = () => {
   return (
     <div
-      className="w-5/12 h-full  rounded-xl px-4 bg-zinc-900"
+      className="w-5/12 h-full  rounded-xl px-4 bg-zinc-100"
       style={{ width: "49%" }}
     >
       <Line options={options} data={data} />

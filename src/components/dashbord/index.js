@@ -5,8 +5,8 @@ import TopViewdList from "./TopViewdList";
 
 const index = () => {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center px-8 py-8 ">
-      <div className="w-full h-1/2 flex items-center justify-center  px-2 py-4">
+    <div className="w-full h-full flex flex-col items-center justify-center">
+      <div className="w-full h-1/2 flex items-center justify-center  px-2 ">
         <ChangeBilbord />
       </div>
       <div

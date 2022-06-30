@@ -9,7 +9,7 @@ const Index = () => {
     setSection(type);
   };
   return (
-    <div className="w-11/12 h-5/6 bg-gray-100 rounded-lg flex">
+    <div className="w-11/12 h-full bg-gray-100 rounded-lg flex">
       <Menu sectionHandler={sectionHandler} />
       {section === "inbox" && <Inbox />}
       {section === "newMassage" && <TextEditor />}
