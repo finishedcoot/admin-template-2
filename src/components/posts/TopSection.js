@@ -1,30 +1,50 @@
 import React from "react";
+import "./styles.css";
+import Plus from "../../static/plus.svg";
+import AllPosts from "../../static/all_posts.png";
+import { Link } from "react-router-dom";
 
 const TopSection = () => {
   return (
     <div className="w-full h-full flex justify-between">
       <div
-        className="w-8/12 h-full relative bg-slate-500 rounded-lg"
+        className="card w-8/12 h-full relative bg-slate-500 rounded-lg overflow-hidden"
         style={{
           backgroundColor: "#fafafa",
           boxShadow: " 2px 2px 10px 1px rgba(0, 0, 0, 0.2)",
         }}
       >
-        <div className="modal w-full h-full absolute"></div>
-        <img src="" alt="something" />
-      </div>
-      <div className="w-4/12 h-full  pl-4">
-        <h1
-          className="w-full h-full rounded-lg  flex justify-center items-center"
-          style={{
-            background: "rgb(0, 0, 0)",
-            background:
-              "linear-gradient(0deg, rgba(0,0,0,0.5553571770505077) 0%, rgba(240,240,240,0.16600143475358897) 52%, rgba(250,250,250,1) 100%)",
-            boxShadow: " 2px 2px 10px 1px rgba(0, 0, 0, 0.2)",
-          }}
+        <Link
+          className="w-full h-full flex justify-center items-center"
+          to={"/posts/all"}
         >
-          Add...
-        </h1>
+          <div className="modal w-full h-full absolute  rounded-lg">
+            <h3>All Posts</h3>
+          </div>
+          <img
+            src={AllPosts}
+            alt="something"
+            className="w-full h-full object-cover   "
+          />
+        </Link>
+      </div>
+
+      <div
+        className="card w-4/12 h-full  ml-8 rounded-lg  flex justify-center items-center relative "
+        style={{
+          backgroundColor: "#fafafa",
+          boxShadow: " 2px 2px 10px 1px rgba(0, 0, 0, 0.2)",
+        }}
+      >
+        <Link
+          className=" w-full h-full flex justify-center items-center"
+          to={"/posts/add"}
+        >
+          <div className="modal w-full h-full absolute  rounded-lg">
+            <h3>Add New</h3>
+          </div>
+          <img src={Plus} alt="plus" className="w-20 h-20 object-cover   " />
+        </Link>
       </div>
     </div>
   );

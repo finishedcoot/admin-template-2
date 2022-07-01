@@ -1,0 +1,23 @@
+.modal{
+  background: linear-gradient(
+    0deg,
+    rgba(1, 0, 15, 0.8746849081429446) 29%,
+    rgba(251, 251, 251, 0.36207986612613796) 100%
+  );
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal h3{
+  color: white;
+  font-size: 30px;
+}
+
+.modal:hover{
+  opacity: 1;
+  cursor: pointer;
+}

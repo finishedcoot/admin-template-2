@@ -51,18 +51,17 @@ const Navbar = () => {
     }
   }, []);
   useEffect(() => {
-    const path = location.pathname;
-    switch (path) {
-      case "/mails":
+    const path = location.pathname.split("/");
+
+    switch (path[1]) {
+      case "mails":
+        setSelectedIndex(3);
+        break;
+      case "posts":
         setSelectedIndex(2);
         break;
-      case "/posts":
-        setSelectedIndex(3);
-        // expected output: "Mangoes and papayas are $2.79 a pound."
-        break;
-      case "/calendar":
+      case "calendar":
         setSelectedIndex(4);
-        // expected output: "Mangoes and papayas are $2.79 a pound."
         break;
       default:
         setSelectedIndex(1);

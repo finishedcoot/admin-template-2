@@ -8,7 +8,7 @@ const PostsComponent = () => {
       <div className="w-full h-1/2  px-4 pt-4 ">
         <TopSection />
       </div>
-      <div className="w-full h-1/2 flex justify-center items-center p-4 ">
+      <div className="w-full h-1/2 flex justify-start items-center p-4 ">
         <BottomSection />
       </div>
     </div>
