@@ -6,6 +6,7 @@ import Select from "@mui/material/Select";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Divider, IconButton } from "@mui/material";
+import GridView from "./GridView";
 
 const AllPosts = () => {
   const [age, setAge] = useState("");
@@ -21,7 +22,7 @@ const AllPosts = () => {
   return (
     <div className="w-full h-full flex justify-center items-center p-8 py-20">
       <div className="w-11/12 h-full bg-gray-100 rounded-lg flex flex-col p-8">
-        <div className="w-2/12 h-16 flex justify-start items-center">
+        <div className="w-52 h-16 flex justify-start items-center">
           <span className="mr-2">Sort:</span>
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">By</InputLabel>
@@ -29,7 +30,7 @@ const AllPosts = () => {
               labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={age}
-              label="Age"
+              label="By"
               onChange={handleChange}
             >
               <MenuItem value={"new"}>Newest</MenuItem>
@@ -46,6 +47,9 @@ const AllPosts = () => {
           </IconButton>
         </div>
         <Divider />
+        <div className="w-full max-h-96 pt-6 ">
+          <GridView />
+        </div>
       </div>
     </div>
   );
