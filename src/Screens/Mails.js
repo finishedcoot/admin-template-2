@@ -1,11 +1,13 @@
 import React from "react";
 import Email from "../components/email/Index";
+import Container from "../components/shared/Container";
+import Header from "../components/shared/Header";
 
 const Mails = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center p-8 py-20">
+    <Container title={"Mails"}>
       <Email />
-    </div>
+    </Container>
   );
 };
 

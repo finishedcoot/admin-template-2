@@ -4,7 +4,7 @@ import Data from "../../../data/data";
 
 const GridView = () => {
   return (
-    <div className="w-full h-full flex flex-wrap justify-around items-center overflow-y-scroll">
+    <div className="w-full h-full flex flex-wrap justify-around items-center">
       {Data.map((proj) => {
         return (
           <ProjectCard

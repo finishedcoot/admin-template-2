@@ -1,10 +1,11 @@
 import React from "react";
 import PostsComponent from "../components/posts/PostsComponent";
+import Container from "../components/shared/Container";
 const Posts = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center p-8 py-20">
+    <Container title={"Posts"}>
       <PostsComponent />
-    </div>
+    </Container>
   );
 };
 

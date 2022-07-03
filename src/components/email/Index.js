@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../shared/Header";
 import Inbox from "./Inbox";
 import Menu from "./Menu";
 import TextEditor from "./TextEditor";
@@ -9,12 +10,10 @@ const Index = () => {
     setSection(type);
   };
   return (
-    <div className="w-11/12 h-full bg-gray-100 rounded-lg flex">
+    <div className="flex">
       <Menu sectionHandler={sectionHandler} />
       {section === "inbox" && <Inbox />}
       {section === "newMassage" && <TextEditor />}
-      {/* <Inbox /> */}
-      {/* <TextEditor /> */}
     </div>
   );
 };

@@ -72,7 +72,8 @@ const Navbar = () => {
     <div
       className={`w-${!collapsed ? 60 : 20} lg:w-${
         !collapsed ? 60 : 20
-      } flex-initial bg-zinc-900 h-screen flex flex-col pr-3.5 pt-3.5 rounded-r-2xl transition-all`}
+      } flex-initial bg-zinc-900 h-screen flex flex-col pr-3.5 pt-3.5 rounded-r-2xl transition-all `}
+      style={{ position: "sticky", left: 0, top: 0 }}
     >
       <Fab
         onClick={() => setCollapsed((prev) => !prev)}
