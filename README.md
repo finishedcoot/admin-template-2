@@ -1,3 +1,8 @@
+##Description
+This is a (at the moment) very simple admin dashbord for an other project that I have built for one of my friends portfolio(https://alizoie.com), it's made with react,tailwindcss and materialUI
+Much more will be added soon.
+![](https://github.com/finishedcoot/admin-template-2/blob/main/zoiedashbord.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
